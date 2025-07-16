@@ -166,6 +166,12 @@ public class WasdMenuInstance : BaseMenuInstance
     /// </summary>
     public void OnTick()
     {
+        if (Player == null || !Player.IsValid)
+        {
+            Close(false);
+            return;
+        }
+        
         PlayerButtons button = Player.Buttons;
 
         foreach (KeyValuePair<string, Action> kvp in Buttons)
