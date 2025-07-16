@@ -257,10 +257,4 @@ public class WasdMenuInstance : BaseMenuInstance
             Player.ExecuteClientCommand($"play {Config.Sound.ScrollUp}");
     }
 
-    public static bool IsValidPlayer(this CCSPlayerController? player)
-    {
-        return player != null 
-        && player.IsValid
-        && !player.IsHLTV;
-    }
 }
